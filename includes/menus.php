@@ -40,13 +40,13 @@ function admin_menu() {
 
 //підключення html - форми, через яку здійснюється управління плагіном
 function get_top_level_page() {
-    require_once 'templates/top_level_page.php';
+    require_once 'templates/top_level.php';
 }
 function get_add_new_destinations_page() {
-    require_once 'templates/new_destinations_page.php';
+    require_once 'templates/add_destinations.php';
 }
 function get_destinations_categories_page() {
-    require_once 'templates/destinations_categories_page.php';
+    require_once 'templates/destinations_categories.php';
 }
 
 ?>

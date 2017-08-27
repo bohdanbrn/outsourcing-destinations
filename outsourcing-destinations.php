@@ -25,7 +25,7 @@
 
 
 //checking whether the script is not called directly
-if ( ! defined( 'ABSPATH' ) ) {
+if ( !defined( 'ABSPATH' ) ) {
     exit; // don't access directly
 };
 
