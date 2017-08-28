@@ -24,18 +24,8 @@
     $table_name = $wpdb->get_blog_prefix() . 'countries';
 
     $form_data = $_POST;
-    $need_keys = "'id'";
-    $need_values = "NULL";
 
-    foreach($form_data as $key => $value) {
-        $need_keys .= ", '$key'";
-        $need_values .= ", '$value'";
-    }
-
-    $sql = "INSERT INTO $table_name ($need_keys) VALUES ($need_values)";
-
-    //$result = $wpdb->query($sql);
-
-    echo json_encode($sql);
-    //echo json_encode($RESULT);
+    $result = $wpdb->insert($table_name, $form_data, array( '%s', '%d' ));
+    
+    echo json_encode($result);
 ?>

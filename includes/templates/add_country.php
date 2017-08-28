@@ -1,19 +1,19 @@
 <link rel="stylesheet" href="<?php echo plugins_url('../../assets/css/style.css', __FILE__); ?>">
 
-<h1>Add new destanation</h1>
+<h1>Add new destination</h1>
 
 <form id="add_country">
     <div class="fields-wrapper">
         <label for="country_name">Country</label>
-        <input id="country_name" class="title form-field" type="text" name="country_name"/>
+        <input id="country_name" class="title form-field" type="text" name="name"/>
     </div>
     <div class="fields-wrapper">
         <label for="country_flag">Flag</label>
-        <input id="country_flag" class="form-field" type="file" name="country_flag"/>
+        <input id="country_flag" class="form-field" type="file" name="flag"/>
     </div>
     <div class="fields-wrapper">
         <label for="country_emblem">Emblem</label>
-        <input id="country_emblem" class="form-field" type="file" name="country_emblem"/>
+        <input id="country_emblem" class="form-field" type="file" name="emblem"/>
     </div>
     <div class="fields-wrapper">
         <label for="short_desc">Short description</label>
@@ -21,18 +21,18 @@
     </div>
     <div class="fields-wrapper">
         <label for="country_population">Population</label>
-        <input id="country_population" class="form-field" type="number" name="country_population"/>
+        <input id="country_population" class="form-field" type="number" name="population"/>
     <div class="fields-wrapper">
         <label for="country_capital">Capital</label>
-        <input id="country_capital" class="form-field" type="text" name="country_capital"/>
+        <input id="country_capital" class="form-field" type="text" name="capital"/>
     </div>
     <div class="fields-wrapper">
         <label for="country_time_zone">Time zone</label>
-        <input id="country_time_zone" class="form-field" type="text" name="country_time_zone"/>
+        <input id="country_time_zone" class="form-field" type="text" name="time_zone"/>
     </div>
     <div class="fields-wrapper">
         <label for="country_currency">Currency</label>
-        <input id="country_currency" class="form-field" type="text" name="country_currency"/>
+        <input id="country_currency" class="form-field" type="text" name="currency"/>
     </div>
     <div class="fields-wrapper">
         <label for="busines_index">Ease of Doing Busines Index (series of articles)</label>

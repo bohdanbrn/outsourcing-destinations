@@ -34,9 +34,17 @@ if ( !defined( 'ABSPATH' ) ) {
 require_once('includes/menus.php');
 
 //functions for creating custom tables for plugin
-require_once('includes/custom_db.php');
+require_once('includes/activation/custom_db.php');
+
+//functions for creating custom pages for display plugin data
+require_once('includes/activation/custom_pages.php');
+
+function activate_outsourcing_destinations() {
+    create_destinations_tables();
+    create_custom_pages();
+}
 
 //create a custom DB tables when the plugin is activated
-register_activation_hook(__FILE__,'create_destinations_tables');
+register_activation_hook(__FILE__,'activate_outsourcing_destinations');
 
 ?>

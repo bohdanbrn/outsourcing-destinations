@@ -13,40 +13,52 @@ function admin_menu() {
         'Destinations',                         //menu_title - The on-screen name text for the submenu.             
         'edit_plugins',                         //capability - The minimum user level or the capability required to display and use this submenu page
         'destinations',                         //menu_slug - The PHP file that handles the display of the menu page content.
-        'get_top_level_page',                   //function
+        'all_destinations_page',                //function
         'dashicons-location-alt',               //icon_url
         '5'                                     //position
     );
 
     add_submenu_page(
         'destinations',                         //parent_slug
-        'Add destinations',                     //page_title
-        'Add destinations',                     //menu_title
+        'Add country',                          //page_title
+        'Add country',                          //menu_title
         'edit_plugins',                         //capability
-        'add_destinations',                     //menu_slug
-        'get_add_new_destinations_page'         //function
+        'add_country',                          //menu_slug
+        'add_country_page'                      //function
     );
 
     add_submenu_page(
-        'destinations',                         //parent_slug
-        'Destinations categories',              //page_title
-        'Destinations categories',              //menu_title
-        'edit_plugins',                         //capability
-        'destinations_categories',              //menu_slug
-        'get_destinations_categories_page'      //function
+        'destinations',
+        'Add city',
+        'Add city',
+        'edit_plugins',
+        'add_city',
+        'add_city_page'
+    );
+
+    add_submenu_page(
+        'destinations',
+        'Add company',
+        'Add company',
+        'edit_plugins',
+        'add_company',
+        'add_company_page'
     );
 }
 
 
-//підключення html - форми, через яку здійснюється управління плагіном
-function get_top_level_page() {
-    require_once 'templates/top_level.php';
+//підключення html - форм, через які здійснюється управління плагіном
+function all_destinations_page() {
+    require_once 'templates/all_destinations.php';
 }
-function get_add_new_destinations_page() {
-    require_once 'templates/add_destinations.php';
+function add_country_page() {
+    require_once 'templates/add_country.php';
 }
-function get_destinations_categories_page() {
-    require_once 'templates/destinations_categories.php';
+function add_city_page() {
+    require_once 'templates/add_city.php';
+}
+function add_company_page() {
+    require_once 'templates/add_company.php';
 }
 
 ?>

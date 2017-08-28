@@ -1,0 +1,1 @@
+Show table with all destinations
