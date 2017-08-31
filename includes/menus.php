@@ -20,8 +20,8 @@ function admin_menu() {
 
     add_submenu_page(
         'destinations',                         //parent_slug
-        'Add country',                          //page_title
-        'Add country',                          //menu_title
+        'Add Country',                          //page_title
+        'Add Country',                          //menu_title
         'edit_plugins',                         //capability
         'add_country',                          //menu_slug
         'add_country_page'                      //function
@@ -29,8 +29,8 @@ function admin_menu() {
 
     add_submenu_page(
         'destinations',
-        'Add city',
-        'Add city',
+        'Add City',
+        'Add City',
         'edit_plugins',
         'add_city',
         'add_city_page'
@@ -38,8 +38,8 @@ function admin_menu() {
 
     add_submenu_page(
         'destinations',
-        'Add company',
-        'Add company',
+        'Add Company',
+        'Add Company',
         'edit_plugins',
         'add_company',
         'add_company_page'

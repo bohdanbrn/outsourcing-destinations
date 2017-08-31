@@ -9,3 +9,6 @@ ver. 0.1
 
 ver. 0.2
   - add button for upload media files
+
+ver. 0.2.1
+  - optimize code

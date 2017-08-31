@@ -1,20 +1,20 @@
-#add_country {
+.add-destination-form {
     max-width: 600px;
 }
 
-#add_country label {
+.add-destination-form label {
     font-weight: bold;
 }
 
-#add_country .form-field {
+.add-destination-form .form-field {
     width: 100%;
 }
 
-#add_country .fields-wrapper {
+.add-destination-form .fields-wrapper {
     margin-top: 15px;
 }
 
-.title {
+.add-destination-form .title {
     padding: 3px 8px;
     font-size: 1.7em;
     line-height: 100%;
@@ -25,7 +25,7 @@
     background-color: #fff;
 }
 
-.img_field {
+.add-destination-form .img_field {
     display: inline-block;
     margin-right: 50px;
 }

@@ -27,4 +27,5 @@
                 <button type="submit" class="remove_image_button button">&times;</button>
             </div>';
     }
+
 ?>

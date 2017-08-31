@@ -1,5 +1,5 @@
 jQuery(function($) {
-    $('#add_country').submit(function() {
+    $('.add-destination-form').submit(function() {
         event.preventDefault(); // Cancel the submit
         var
             form = $(this),
@@ -11,7 +11,7 @@ jQuery(function($) {
         $.ajax ({
             url: siteUrl + "/wp-content/plugins/outsourcing-destinations/includes/insert_data.php",
             data: form.serialize(),
-            dataType: "html",
+            dataType: "json",
             method: "POST",
             beforeSend: function() {
                 submitButton.text("Wait...");
@@ -19,16 +19,16 @@ jQuery(function($) {
             success: function(response) {
                 submitButton.text("Send");
                 console.log(response);
-                if (response == 1) {
-                    formMessage.html("Country successfully added");
-                    //reset form
+                if (response.type === "success") {
+                    //display message
+                    formMessage.html(response.message);
+                    //and reset form
                     form[0].reset();
                     $('.img_field').children('img').attr('src', noImgUrl);
                     $('.img_field').children('img').attr('data-src', '');
-                    //$(this).prev().prev().val('');
                 }
                 else {
-                    formMessage.html(response);
+                    formMessage.html(response.message);
                 }
             },
             error: function(response) {

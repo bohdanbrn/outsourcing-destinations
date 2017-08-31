@@ -6,7 +6,7 @@
 
 <h1>Add new destination</h1>
 
-<form id="add_country" method="post" enctype="multipart/form-data">
+<form id="add_country" class="add-destination-form" method="post" enctype="multipart/form-data">
     <div class="fields-wrapper">
         <label for="name">Country</label>
         <input id="name" class="title form-field" type="text" name="name" required/>
@@ -14,11 +14,11 @@
     <div class="fields-wrapper">
         <div class="img_field">
             <div><label for="flag_id">Flag</label></div>
-            <?php true_image_uploader_field('flag_id', ''); ?>
+            <?php true_image_uploader_field('flag_id'); ?>
         </div>
         <div class="img_field">
             <div><label for="emblem_id">Emblem</label></div>
-            <?php true_image_uploader_field('emblem_id', ''); ?>
+            <?php true_image_uploader_field('emblem_id'); ?>
         </div>
     </div>
     <div class="fields-wrapper">
@@ -144,10 +144,9 @@
         <label for="stability_score">Stability score</label>
         <input id="stability_score" class="form-field" type="number" name="stability_score"/>
     </div>
-    <button id="add_country_btn" class="button button-primary button-large">Add</button>
-    <br>
-    <span id="form_message"></span>
+    <button id="send_btn" class="button button-primary button-large">Add</button>
+    <div id="form_message"></div>
 </form>
 
-<script src="<?php echo plugins_url('../../assets/js/ajax.js', __FILE__); ?>"></script>
+<script src="<?php echo plugins_url('../../assets/js/ajax_add_destinations.js', __FILE__); ?>"></script>
 <script src="<?php echo plugins_url('../../assets/js/uploadscript.js', __FILE__); ?>"></script>
