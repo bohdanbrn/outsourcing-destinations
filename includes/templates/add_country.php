@@ -1,38 +1,44 @@
+<?php
+    require_once('/../functions.php');
+?>
+
 <link rel="stylesheet" href="<?php echo plugins_url('../../assets/css/style.css', __FILE__); ?>">
 
 <h1>Add new destination</h1>
 
-<form id="add_country">
+<form id="add_country" method="post" enctype="multipart/form-data">
     <div class="fields-wrapper">
-        <label for="country_name">Country</label>
-        <input id="country_name" class="title form-field" type="text" name="name"/>
+        <label for="name">Country</label>
+        <input id="name" class="title form-field" type="text" name="name" required/>
     </div>
     <div class="fields-wrapper">
-        <label for="country_flag">Flag</label>
-        <input id="country_flag" class="form-field" type="file" name="flag"/>
-    </div>
-    <div class="fields-wrapper">
-        <label for="country_emblem">Emblem</label>
-        <input id="country_emblem" class="form-field" type="file" name="emblem"/>
+        <div class="img_field">
+            <div><label for="flag_id">Flag</label></div>
+            <?php true_image_uploader_field('flag_id', ''); ?>
+        </div>
+        <div class="img_field">
+            <div><label for="emblem_id">Emblem</label></div>
+            <?php true_image_uploader_field('emblem_id', ''); ?>
+        </div>
     </div>
     <div class="fields-wrapper">
         <label for="short_desc">Short description</label>
         <textarea id="short_desc" class="form-field" name="short_desc" rows="8"></textarea>
     </div>
     <div class="fields-wrapper">
-        <label for="country_population">Population</label>
-        <input id="country_population" class="form-field" type="number" name="population"/>
+        <label for="population">Population</label>
+        <input id="population" class="form-field" type="number" name="population"/>
     <div class="fields-wrapper">
-        <label for="country_capital">Capital</label>
-        <input id="country_capital" class="form-field" type="text" name="capital"/>
+        <label for="capital">Capital</label>
+        <input id="capital" class="form-field" type="text" name="capital"/>
     </div>
     <div class="fields-wrapper">
-        <label for="country_time_zone">Time zone</label>
-        <input id="country_time_zone" class="form-field" type="text" name="time_zone"/>
+        <label for="time_zone">Time zone</label>
+        <input id="time_zone" class="form-field" type="text" name="time_zone"/>
     </div>
     <div class="fields-wrapper">
-        <label for="country_currency">Currency</label>
-        <input id="country_currency" class="form-field" type="text" name="currency"/>
+        <label for="currency">Currency</label>
+        <input id="currency" class="form-field" type="text" name="currency"/>
     </div>
     <div class="fields-wrapper">
         <label for="busines_index">Ease of Doing Busines Index (series of articles)</label>
@@ -40,7 +46,7 @@
     </div>
     <div class="fields-wrapper">
         <label for="unemployment_ratio">Unemployment ratio</label>
-        <input id="unemployment_ratio" class="form-field" type="number" name="unemployment_ratio"/>
+        <input id="unemployment_ratio" class="form-field" type="number" step="0.01" name="unemployment_ratio"/>
     </div>
     <div class="fields-wrapper">
         <label for="it_headcount">IT Headcount</label>
@@ -65,6 +71,10 @@
     <div class="fields-wrapper">
         <label for="salary_mid">Salary Mid</label>
         <input id="salary_mid" class="form-field" type="number" name="salary_mid"/>
+    </div>
+    <div class="fields-wrapper">
+        <label for="salary_sen">Salary Sen</label>
+        <input id="salary_sen" class="form-field" type="number" name="salary_sen"/>
     </div>
     <div class="fields-wrapper">
         <label for="salary_lead">Salary Lead</label>
@@ -139,5 +149,5 @@
     <span id="form_message"></span>
 </form>
 
-<script src="<?php echo plugins_url('../../assets/js/jquery-3.2.1.min.js', __FILE__); ?>"></script>
 <script src="<?php echo plugins_url('../../assets/js/ajax.js', __FILE__); ?>"></script>
+<script src="<?php echo plugins_url('../../assets/js/uploadscript.js', __FILE__); ?>"></script>

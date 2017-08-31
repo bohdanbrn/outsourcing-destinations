@@ -10,6 +10,7 @@
 /*
 global $wpdb;
 
+//константа WP_UNINSTALL_PLUGIN визначається WordPress при видаленні плагіна
 if (!defined('ABSPATH') || !defined('WP_UNINSTALL_PLUGIN')) {
 	 exit();  // silence is golden
 }

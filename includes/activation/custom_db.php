@@ -21,8 +21,8 @@ function create_countries_table() {
         $sql = "CREATE TABLE {$table_name} (
             id int(11) unsigned NOT NULL auto_increment,
             name varchar(255) NOT NULL default '',
-            flag varchar(255) NOT NULL default '',
-            emblem varchar(255) NOT NULL default '',
+            flag_id int(11) unsigned NOT NULL default '0',
+            emblem_id int(11) unsigned NOT NULL default '0',
             short_desc TEXT NOT NULL default '',
             population int(11) unsigned NOT NULL default '0',
             capital varchar(255) NOT NULL default '',

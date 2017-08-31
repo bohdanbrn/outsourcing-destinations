@@ -5,21 +5,31 @@ jQuery(function($) {
             form = $(this),
             submitButton = $('#send_btn'),
             formMessage = $('#form_message'),
-            siteUrl = window.location.origin;
-            //configUrl = form.attr("action");
+            siteUrl = window.location.origin,
+            noImgUrl = siteUrl + "/wp-content/plugins/outsourcing-destinations/assets/img/no-image.png";
         
         $.ajax ({
             url: siteUrl + "/wp-content/plugins/outsourcing-destinations/includes/insert_data.php",
             data: form.serialize(),
-            dataType: "json",
+            dataType: "html",
             method: "POST",
             beforeSend: function() {
                 submitButton.text("Wait...");
             },
             success: function(response) {
-                console.log(response);
-                formMessage.html(response);
                 submitButton.text("Send");
+                console.log(response);
+                if (response == 1) {
+                    formMessage.html("Country successfully added");
+                    //reset form
+                    form[0].reset();
+                    $('.img_field').children('img').attr('src', noImgUrl);
+                    $('.img_field').children('img').attr('data-src', '');
+                    //$(this).prev().prev().val('');
+                }
+                else {
+                    formMessage.html(response);
+                }
             },
             error: function(response) {
                 formMessage.html("Check your Internet connection");
@@ -28,4 +38,3 @@ jQuery(function($) {
         });
     });
 });
-
