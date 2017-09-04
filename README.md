@@ -12,3 +12,6 @@ ver. 0.2
 
 ver. 0.2.1
   - optimize code
+
+ver. 0.2.2
+  - add tables ('city', 'country') and page 'Companies' for automatically create

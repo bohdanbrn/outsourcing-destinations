@@ -1,5 +1,4 @@
 <?php
-/*
     function create_cities_table() {
         global $wpdb;
         //db prefix
@@ -37,12 +36,11 @@
                 city_popular_technologies TEXT NOT NULL default '',
                 city_lack_technologies TEXT NOT NULL default '',
                 city_hiring_time_score int(11) unsigned NOT NULL default '0',
-                PRIMARY KEY  (id)
+                PRIMARY KEY  (city_id)
             ) {$charset_collate};";
             
             //create a table
             dbDelta( $sql );
         }
     }
-*/
 ?>

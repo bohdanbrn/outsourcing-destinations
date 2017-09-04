@@ -25,6 +25,7 @@
     function create_custom_pages() {
         create_new_page("Destinations", "tpl_destinations.php");
         create_new_page("Cities", "tpl_destinations.php");
+        create_new_page("Companies", "tpl_destinations.php");
     }
 
 ?>
