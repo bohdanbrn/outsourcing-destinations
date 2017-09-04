@@ -1,12 +1,17 @@
 <?php
+    // Show form for add country
+
     require_once('/../functions.php');
 ?>
 
 <link rel="stylesheet" href="<?php echo plugins_url('../../assets/css/style.css', __FILE__); ?>">
 
-<h1>Add new destination</h1>
+<h1>Add new country</h1>
 
 <form id="add_country" class="add-destination-form" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" name="destination_type" value="country">
+
     <div class="fields-wrapper">
         <label for="name">Country</label>
         <input id="name" class="title form-field" type="text" name="country_name" required/>
@@ -144,8 +149,10 @@
         <label for="stability_score">Stability score</label>
         <input id="stability_score" class="form-field" type="number" name="country_stability_score"/>
     </div>
+    
     <button type="submit" id="send_btn" class="button button-primary button-large">Add</button>
     <div id="form_message"></div>
+    
 </form>
 
 <script src="<?php echo plugins_url('../../assets/js/ajax_add_destinations.js', __FILE__); ?>"></script>

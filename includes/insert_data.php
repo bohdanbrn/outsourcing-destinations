@@ -6,9 +6,21 @@
     require( '../../../../wp-load.php' );
     global $wpdb;
 
-    $table_name = $wpdb->get_blog_prefix() . 'countries';
-
     $form_data = $_POST;
+    
+    $destination_type = array_shift( $form_data );
+
+    $table_name = $wpdb->get_blog_prefix();
+
+    if ( $destination_type == 'country' ) {
+        $table_name .= 'countries';
+    }
+    else if ( $destination_type == 'city' ) {
+        $table_name .= 'cities';
+    }
+    else {
+        $table_name .= 'companies';
+    }
 
     $query = $wpdb->insert($table_name, $form_data, array( '%s', '%d' ));
     
@@ -16,11 +28,12 @@
 
     if ($query == 1) {
         $result['type'] = 'success';
-        $result['message'] = 'Country successfully added';
+        $result['message'] = ucfirst($destination_type) . ' successfully added';
     }
     else {
         $result['type'] = 'error';
         $result['message'] = $query;
     }
-    echo json_encode($result);
+    echo json_encode($result); 
+
 ?>

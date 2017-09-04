@@ -14,7 +14,7 @@
                 city_id int(11) unsigned NOT NULL auto_increment,
                 city_name varchar(255) NOT NULL default '',
                 city_parrent_id int(11) unsigned NOT NULL default '0',
-                city_short_description TEXT NOT NULL default '',
+                city_short_desc TEXT NOT NULL default '',
                 city_population int(11) unsigned NOT NULL default '0',
                 city_it_headcount int(11) unsigned NOT NULL default '0',
                 city_it_headcount_score int(11) unsigned NOT NULL default '0',

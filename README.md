@@ -15,3 +15,8 @@ ver. 0.2.1
 
 ver. 0.2.2
   - add tables ('city', 'country') and page 'Companies' for automatically create
+
+ver. 0.2.3
+  - create pages:
+    - Add city
+    - Add company
