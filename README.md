@@ -20,3 +20,6 @@ ver. 0.2.3
   - create pages:
     - Add city
     - Add company
+
+ver. 0.3
+  - create page 'all destinations'

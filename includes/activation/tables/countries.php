@@ -46,6 +46,8 @@
                 country_office_rent_score int(11) unsigned NOT NULL default '0',
                 country_stability TEXT NOT NULL default '',
                 country_stability_score int(11) unsigned NOT NULL default '0',
+                country_publish_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                country_modified TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY  (country_id)
             ) {$charset_collate};";
             

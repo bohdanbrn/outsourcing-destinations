@@ -13,6 +13,8 @@
             $sql = "CREATE TABLE {$table_name} (
                 company_id int(11) unsigned NOT NULL auto_increment,
                 company_name varchar(255) NOT NULL default '',
+                company_publish_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                company_modified TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY  (company_id)
             ) {$charset_collate};";
             

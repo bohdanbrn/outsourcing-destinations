@@ -36,6 +36,8 @@
                 city_popular_technologies TEXT NOT NULL default '',
                 city_lack_technologies TEXT NOT NULL default '',
                 city_hiring_time_score int(11) unsigned NOT NULL default '0',
+                city_publish_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                city_modified TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY  (city_id)
             ) {$charset_collate};";
             
